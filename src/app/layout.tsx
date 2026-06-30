@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { product, siteUrl } from "@/data/product";
+import { playStoreUrl, product, siteUrl } from "@/data/product";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Android",
     description: product.description,
-    url: siteUrl,
+    url: playStoreUrl,
   };
 
   return (

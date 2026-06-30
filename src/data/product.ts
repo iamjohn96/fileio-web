@@ -1,6 +1,5 @@
 export const siteUrl = "https://fileio.jonnylab.app";
 
-// TODO: Replace with the production Google Play URL for com.jonnylab.fileio.
 export const playStoreUrl = "https://play.google.com/store/apps/details?id=com.jonnylab.fileio";
 
 export const product = {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { playStoreUrl } from "@/data/product";
 
 const navigation = [
   { label: "Features", href: "/#features" },
@@ -26,7 +27,7 @@ export function SiteHeader() {
           {navigation.map((item) => (
             <Link key={item.label} href={item.href} className="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-slate-950">{item.label}</Link>
           ))}
-          <Link href="/download" className="button-primary ml-1 !min-h-9 !px-4 !py-2 text-sm">Download</Link>
+          <a href={playStoreUrl} className="button-primary ml-1 !min-h-9 !px-4 !py-2 text-sm" target="_blank" rel="noopener noreferrer">Download</a>
         </nav>
         <details className="group relative sm:hidden">
           <summary className="grid size-10 cursor-pointer list-none place-items-center rounded-xl border border-slate-200 bg-white text-slate-700" aria-label="Open navigation menu">
@@ -34,7 +35,7 @@ export function SiteHeader() {
           </summary>
           <nav aria-label="Mobile navigation" className="absolute right-0 mt-2 w-48 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-xl shadow-slate-900/10">
             {navigation.map((item) => <Link key={item.label} href={item.href} className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50">{item.label}</Link>)}
-            <Link href="/download" className="mt-1 block rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white">Download</Link>
+            <a href={playStoreUrl} className="mt-1 block rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white" target="_blank" rel="noopener noreferrer">Download</a>
           </nav>
         </details>
       </div>

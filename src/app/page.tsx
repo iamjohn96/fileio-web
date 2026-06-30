@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArticleCard } from "@/components/article-card";
 import { ArrowIcon, CheckIcon, Icon } from "@/components/icons";
-import { blogPosts, faqs, features, guides } from "@/data/product";
+import { blogPosts, faqs, features, guides, playStoreUrl } from "@/data/product";
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
             <h1 className="mt-6 max-w-3xl text-5xl font-bold leading-[1.04] tracking-[-0.055em] text-slate-950 sm:text-6xl">Your files,<br /><span className="text-blue-600">simple and clear.</span></h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">Fileio is a simple Android file manager, document viewer, and PDF scanner. Find local files, open common document formats, and keep everyday file tasks in one place.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/download" className="button-primary">Download for Android <ArrowIcon /></Link>
+              <a href={playStoreUrl} className="button-primary" target="_blank" rel="noopener noreferrer">Download for Android <ArrowIcon /></a>
               <Link href="#features" className="button-secondary">Explore features</Link>
             </div>
             <p className="mt-4 text-xs text-slate-500">No Fileio account required for local file management.</p>
@@ -82,7 +82,7 @@ export default function HomePage() {
         <div className="page-shell grid gap-10 lg:grid-cols-[.65fr_1fr]"><div><p className="eyebrow">FAQ</p><h2 className="section-title mt-4">Straight answers.</h2><p className="mt-4 text-slate-600">What Fileio does—and what it does not do.</p></div><div className="divide-y divide-slate-200 border-y border-slate-200">{faqs.map((faq) => <details key={faq.question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900"><span>{faq.question}</span><span className="text-xl font-normal text-slate-400 group-open:rotate-45">+</span></summary><p className="mt-3 max-w-2xl pr-8 text-sm leading-6 text-slate-600">{faq.answer}</p></details>)}</div></div>
       </section>
 
-      <section className="page-shell pb-20 sm:pb-28"><div className="overflow-hidden rounded-3xl bg-blue-600 px-6 py-12 text-center text-white shadow-xl shadow-blue-600/20 sm:px-12 sm:py-16"><p className="text-sm font-semibold text-blue-100">Fileio for Android</p><h2 className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Your everyday files, in one simple app.</h2><p className="mx-auto mt-4 max-w-xl leading-7 text-blue-100">Manage local files, view documents, and scan PDFs with Fileio.</p><Link href="/download" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 shadow-sm">Download for Android <ArrowIcon /></Link></div></section>
+      <section className="page-shell pb-20 sm:pb-28"><div className="overflow-hidden rounded-3xl bg-blue-600 px-6 py-12 text-center text-white shadow-xl shadow-blue-600/20 sm:px-12 sm:py-16"><p className="text-sm font-semibold text-blue-100">Fileio for Android</p><h2 className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Your everyday files, in one simple app.</h2><p className="mx-auto mt-4 max-w-xl leading-7 text-blue-100">Manage local files, view documents, and scan PDFs with Fileio.</p><a href={playStoreUrl} className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-blue-700 shadow-sm" target="_blank" rel="noopener noreferrer">Download for Android <ArrowIcon /></a></div></section>
     </>
   );
 }

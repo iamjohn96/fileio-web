@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Brand } from "./site-header";
+import { playStoreUrl } from "@/data/product";
 
 export function SiteFooter() {
   return (
@@ -13,7 +14,7 @@ export function SiteFooter() {
           <Link className="hover:text-slate-950" href="/#features">Features</Link>
           <Link className="hover:text-slate-950" href="/guides">Guides</Link>
           <Link className="hover:text-slate-950" href="/blog">Blog</Link>
-          <Link className="hover:text-slate-950" href="/download">Download</Link>
+          <a className="hover:text-slate-950" href={playStoreUrl} target="_blank" rel="noopener noreferrer">Download</a>
           <Link className="hover:text-slate-950" href="/privacy">Privacy</Link>
           <Link className="hover:text-slate-950" href="/terms">Terms</Link>
         </nav>

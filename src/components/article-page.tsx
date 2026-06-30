@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowIcon } from "./icons";
-import { formatDate, type Article } from "@/data/product";
+import { formatDate, playStoreUrl, type Article } from "@/data/product";
 
 export function ArticlePage({ article, type }: { article: Article; type: "Blog" | "Guide" }) {
   const basePath = type === "Blog" ? "/blog" : "/guides";
@@ -26,7 +26,7 @@ export function ArticlePage({ article, type }: { article: Article; type: "Blog" 
         </div>
         <div className="mt-14 rounded-3xl bg-blue-600 p-8 text-white sm:flex sm:items-center sm:justify-between">
           <div><p className="text-sm font-semibold text-blue-100">Fileio for Android</p><p className="mt-1 text-xl font-semibold">Manage, view, and scan in one app.</p></div>
-          <Link href="/download" className="mt-5 inline-flex rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-700 sm:mt-0">Get Fileio</Link>
+          <a href={playStoreUrl} className="mt-5 inline-flex rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-700 sm:mt-0" target="_blank" rel="noopener noreferrer">Get Fileio</a>
         </div>
       </div>
     </article>
