@@ -1,0 +1,84 @@
+{
+  "product": {
+    "name": "Fileio",
+    "site_url": "https://fileio.jonnylab.app",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.jonnylab.fileio",
+    "summary": "Android file manager, document viewer, and PDF scanner",
+    "features": [
+      "Manage local files and browse folders",
+      "Search and sort files",
+      "Use favorites and recent files",
+      "Rename, delete, and share local files",
+      "View PDF, DOCX, XLSX, PPTX, JPG, and PNG files",
+      "Scan paper documents and save them as PDF files",
+      "Pro users can browse Google Drive and Dropbox folders and open supported files",
+      "Google Drive and Dropbox access is read-only"
+    ]
+  },
+  "provider": {
+    "name": "hermes",
+    "model": "deepseek-chat",
+    "default_base_url": "https://api.deepseek.com",
+    "base_url_env": ["HERMES_LLM_BASE_URL", "DEEPSEEK_BASE_URL"],
+    "api_key_env": ["HERMES_LLM_API_KEY", "DEEPSEEK_API_KEY"]
+  },
+  "content_dir": "content/blog",
+  "keyword_file": "data/used_keywords.json",
+  "word_count": {"min": 1500, "max": 2500},
+  "keywords": [
+    "Android file manager",
+    "Best Android file manager",
+    "Open PDF on Android",
+    "Open DOCX on Android",
+    "Open XLSX on Android",
+    "Open PPTX on Android",
+    "Android document viewer",
+    "Offline document viewer",
+    "Google Drive document viewer",
+    "Dropbox document viewer",
+    "View PDF Android",
+    "Scan documents Android",
+    "Organize files Android",
+    "Downloads folder Android",
+    "Recent files Android",
+    "Favorites Android",
+    "Search files Android",
+    "Rename files Android",
+    "Delete files Android",
+    "File explorer Android",
+    "Read-only cloud access"
+  ],
+  "reserved_slugs": [
+    "what-read-only-cloud-access-means",
+    "choosing-an-android-document-viewer",
+    "organize-files-on-android"
+  ],
+  "banned_phrases": [
+    "AI Scanner",
+    "OCR",
+    "File Sync",
+    "Cloud Backup",
+    "Unlimited Storage",
+    "10GB Storage",
+    "2GB Free",
+    "Upload to Google Drive",
+    "Upload to Dropbox",
+    "Edit Cloud Files",
+    "Cloud Storage",
+    "Automatic Backup",
+    "Cross-device Sync",
+    "Instagram",
+    "SafeUnfollow"
+  ],
+  "unsupported_claim_patterns": [
+    "(?i)\\b(?:upload|edit|modify|write|sync|back\\s*up)\\w*\\b.{0,45}\\b(?:google drive|dropbox|cloud)\\b",
+    "(?i)\\b(?:google drive|dropbox|cloud)\\b.{0,45}\\b(?:upload|edit|modify|write|sync|back\\s*up)\\w*\\b",
+    "(?i)\\b(?:extract|recognize|search)\\w*\\b.{0,30}\\btext\\b.{0,30}\\b(?:scan|image|photo|pdf)\\w*\\b",
+    "(?i)\\bFileio\\b.{0,35}\\b(?:compress|convert|encrypt|annotate)\\w*\\b"
+  ],
+  "git": {
+    "branch": "main",
+    "commit_message": "publish Fileio SEO article: {slug}",
+    "checks": ["npm run lint", "npm run build"]
+  }
+}

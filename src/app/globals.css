@@ -17,8 +17,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-title { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.08; font-weight: 750; letter-spacing: -.04em; color: #0f172a; }
 .article-body section + section { margin-top: 2.5rem; }
 .article-body h2 { margin: 0 0 1rem; font-size: 1.5rem; line-height: 2rem; font-weight: 700; letter-spacing: -.025em; color: #0f172a; }
+.article-body h2:not(:first-child) { margin-top: 2.5rem; }
+.article-body h3 { margin: 2rem 0 .75rem; font-size: 1.2rem; line-height: 1.7rem; font-weight: 700; color: #0f172a; }
 .article-body p { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.85; color: #475569; }
 .article-body ul { margin: 1.25rem 0; padding-left: 1.5rem; list-style: disc; color: #475569; }
+.article-body ol { margin: 1.25rem 0; padding-left: 1.5rem; list-style: decimal; color: #475569; }
 .article-body li { margin-top: .6rem; line-height: 1.75; }
+.article-body a { color: #1d4ed8; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-body strong { color: #1e293b; }
+.article-body blockquote { margin: 1.5rem 0; border-left: 3px solid #93c5fd; padding-left: 1.25rem; }
 ::selection { background: #dbeafe; color: #1e3a8a; }
 @media (min-width: 640px) { .page-shell { width: min(100% - 3rem, 72rem); } }

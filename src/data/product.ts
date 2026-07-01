@@ -106,6 +106,10 @@ export type Article = {
   publishedAt: string;
   readTime: string;
   sections: ArticleSection[];
+  content?: string;
+  tags?: string[];
+  keyword?: string;
+  canonical?: string;
 };
 
 export const blogPosts: Article[] = [

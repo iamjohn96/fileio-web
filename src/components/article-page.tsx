@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { ArrowIcon } from "./icons";
 import { formatDate, playStoreUrl, type Article } from "@/data/product";
 
@@ -16,7 +17,7 @@ export function ArticlePage({ article, type }: { article: Article; type: "Blog" 
         <h1 className="mt-5 text-4xl font-bold leading-tight tracking-[-0.04em] text-slate-950 sm:text-5xl">{article.title}</h1>
         <p className="mt-6 text-lg leading-8 text-slate-600">{article.description}</p>
         <div className="article-body mt-12 border-t border-slate-200 pt-10">
-          {article.sections.map((section) => (
+          {article.content ? <ReactMarkdown>{article.content}</ReactMarkdown> : article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
